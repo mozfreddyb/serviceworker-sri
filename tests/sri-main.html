@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script>
+        navigator.serviceWorker.register("./sri-worker.js").then(
+                function(sw) {
+                    console.log("registered. reloading.");
+                    location.reload();
+                }
+        ).catch(function(err) {
+                    console.log("sw not registered?", err);
+                })
+
+    </script>
+    <title></title>
+</head>
+<body>
+<script src="sri-script.js"></script>
+<script is="sri-script" src="https://people.mozilla.org/~fbraun/alert.js" integrity="ni://sha-256;bhHHL3z2vDgxUt0W3dWQOrprscmda2Y5pLsLg4GF+pI=/?ct=application/javascript"></script>
+
+
+</body>
+</html>
